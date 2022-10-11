@@ -1,0 +1,28 @@
+
+第一步：依赖
+        <dependency>
+            <groupId>com.github.ulisesbocchio</groupId>
+            <artifactId>jasypt-spring-boot-starter</artifactId>
+            <version>2.1.1</version>
+        </dependency>
+                        
+第二步：计算出 syning 的加密后的字符串
+     BasicTextEncryptor encryptor = new BasicTextEncryptor();
+    encryptor.setPassword("retail_salt");    // 盐值
+    System.out.println("syning = " + encryptor.encrypt("syning"));
+       
+第三步：YAML 配置文件
+jasypt:
+  encryptor:
+    password: retail_salt
+ 
+ 第四步：将第二布算出来的加密密文，拿到配置文件中，用 ENC() 函数
+          username: ENC(iPeSq52xlHvKJ+1EhWTAYw==)
+          password: ENC(URAl1pTq8rYmjsGM6MMxPgoqekMXXeYy)
+ 
+ 
+ 
+ 
+ 
+ 
+
