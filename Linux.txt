@@ -1,0 +1,15 @@
+// 后台运行
+nohup java -jar syning.jar > tmp.txt &      
+
+
+
+
+
+
+
+
+
+
+
+
+
